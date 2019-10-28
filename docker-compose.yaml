@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  init-env:
+    build: .
+    volumes:
+      - ./config/test.conf:/tmp/env.conf

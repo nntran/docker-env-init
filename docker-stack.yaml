@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  init-env:
+    image: ntdtfr/env-init
+    configs:
+      - source: config-env
+        target: /tmp/env.conf
+    deploy:
+      mode: replicated
+      replicas: 1
+configs:
+  config-env:
+    file: ./config/test.conf
