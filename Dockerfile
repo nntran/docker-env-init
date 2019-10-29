@@ -1,11 +1,12 @@
 FROM alpine
+MAINTAINER ntran@ntdt.fr
 
 #USER root
-ENV ENV_CONFIG_FILE="/tmp/env.conf"
+ENV ENV_CONFIG_FILE="/opt/conf/env.conf"
 
-COPY entrypoint.sh /tmp/entrypoint.sh
-VOLUME ["/tmp/env.conf"]
-WORKDIR /tmp
+COPY scripts /opt/scripts
+VOLUME ["/opt/conf/env.conf"]
+WORKDIR /opt/conf
 
-ENTRYPOINT  [ "/tmp/entrypoint.sh" ]
-CMD [ "/tmp/env.conf" ]
+ENTRYPOINT  [ "/opt/scripts/entrypoint.sh" ]
+# CMD [ "/opt/conf/env.conf" ]

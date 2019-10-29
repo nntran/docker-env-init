@@ -4,4 +4,4 @@ services:
     image: ntdtfr/env-initializer
     build: .
     volumes:
-      - ./config/test.conf:/tmp/env.conf
+      - ./config/test.env:/opt/conf/env.conf

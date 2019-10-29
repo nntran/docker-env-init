@@ -4,10 +4,10 @@ services:
     image: ntdtfr/env-initializer
     configs:
       - source: config-env
-        target: /tmp/env.conf
+        target: /opt/conf/env.conf
     deploy:
       mode: replicated
       replicas: 1
 configs:
   config-env:
-    file: ./config/test.conf
+    file: ./config/env.conf

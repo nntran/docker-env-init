@@ -1,7 +1,8 @@
 #!/bin/sh -e
 
 # Input file
-config_file=$1
+#config_file=$1
+config_file=$ENV_CONFIG_FILE
 
 echo "Start initializing environment variables from file $config_file"
 
