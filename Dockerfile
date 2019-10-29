@@ -5,8 +5,9 @@ MAINTAINER ntran@ntdt.fr
 ENV ENV_CONFIG_FILE="/opt/conf/env.conf"
 
 COPY scripts /opt/scripts
-VOLUME ["/opt/conf/env.conf"]
-WORKDIR /opt/conf
 
-ENTRYPOINT  [ "/opt/scripts/entrypoint.sh" ]
+VOLUME [${ENV_CONFIG_FILE}]
+WORKDIR /opt
+
+ENTRYPOINT  [ "./scripts/entrypoint.sh" ]
 # CMD [ "/opt/conf/env.conf" ]

@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  init-env:
+  env-init:
     image: ntdtfr/env-initializer
     build: .
     volumes:
