@@ -1,4 +1,4 @@
-# env-init-docker
+# docker-env-init
 
 Environment variables initalizer
 
